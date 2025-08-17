@@ -1,4 +1,3 @@
-
 # OpenAI Gym
 
 ## Installation
