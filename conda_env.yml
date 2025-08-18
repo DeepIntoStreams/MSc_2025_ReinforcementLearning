@@ -1,0 +1,14 @@
+name: decision-transformer-gym
+channels:
+- pytorch
+dependencies:
+- python=3.8.5
+- anaconda
+- cudatoolkit=11.8
+- numpy
+- pip
+- pip:
+  - numpy==1.20.3
+  - torch==2.1.0
+  - transformers==4.5.1
+  - wandb==0.9.1

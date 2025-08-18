@@ -1,0 +1,760 @@
+(base) root@autodl-container-5d5147b55f-ca24a251:~/autodl-tmp/强化学习# python experiment.py --dataset_path data/simulated_stock_trajs_medium.pkl --eval_dataset_path data/simulated_stock_eval_31x50.pkl --model_type dt --max_iters 10 --num_steps_per_iter 80 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.010
+==================================================
+Starting new experiment: Offline Stock RL
+20000 trajectories, 620000 timesteps found
+Average return: 0.0467, std: 0.0114
+Max return: 0.0672, min: 0.0261
+==================================================
+Using evaluation dataset: 50 trajectories
+================================================================================
+Iteration 10
+time/training: 1.680262804031372
+evaluation/target_0.01_return_mean: 0.03806356682770934
+evaluation/target_0.01_return_std: 0.03642469038837341
+evaluation/target_0.01_length_mean: 30.0
+evaluation/target_0.01_length_std: 0.0
+time/total: 58.464813232421875
+time/evaluation: 4.54682731628418
+training/train_loss_mean: 0.04954897239804268
+training/train_loss_std: 0.0014907262394646507
+training/action_error: 0.05056266486644745
+RTG embedding weight norm: 7.084565162658691
+RTG embedding bias norm: 6.1293182373046875
+State embedding weight norm: 6.728413105010986
+Action embedding weight norm: 6.335277080535889
+RTG embedding output range: -0.9976187348365784 to 0.9543843865394592
+RTG embedding output std: 0.5425446629524231
+Saved trained model to dt_model.pth
+(base) root@autodl-container-5d5147b55f-ca24a251:~/autodl-tmp/强化学习# 
+================================================================================
+Iteration 10
+time/training: 1.7357759475708008
+evaluation/target_0.025_return_mean: 0.03959273856065637
+evaluation/target_0.025_return_std: 0.03705563944888682
+evaluation/target_0.025_length_mean: 30.0
+evaluation/target_0.025_length_std: 0.0
+time/total: 57.34428834915161
+time/evaluation: 4.0024144649505615
+training/train_loss_mean: 0.05356576759368181
+training/train_loss_std: 0.0021995645398798836
+training/action_error: 0.04938165470957756
+RTG embedding weight norm: 6.9663238525390625
+RTG embedding bias norm: 6.0365519523620605
+State embedding weight norm: 7.003177642822266
+Action embedding weight norm: 6.825021743774414
+RTG embedding output range: -0.9734983444213867 to 1.00046968460083
+RTG embedding output std: 0.5244626402854919
+Saved trained model to dt_model.pth
+(base) root@autodl-container-5d5147b55f-ca24a251:~/autodl-tmp/强化学习# 
+================================================================================
+Iteration 10
+time/training: 1.7134556770324707
+evaluation/target_0.035_return_mean: 0.03912411140139669
+evaluation/target_0.035_return_std: 0.03728633179120159
+evaluation/target_0.035_length_mean: 30.0
+evaluation/target_0.035_length_std: 0.0
+time/total: 56.72280788421631
+time/evaluation: 3.9011881351470947
+training/train_loss_mean: 0.04987941035069525
+training/train_loss_std: 0.0016296953837150762
+training/action_error: 0.047297582030296326
+RTG embedding weight norm: 6.533077239990234
+RTG embedding bias norm: 6.25656795501709
+State embedding weight norm: 6.417483329772949
+Action embedding weight norm: 6.421670436859131
+RTG embedding output range: -1.0118677616119385 to 1.0180845260620117
+RTG embedding output std: 0.5529314279556274
+Saved trained model to dt_model.pth
+(base) root@autodl-container-5d5147b55f-ca24a251:~/autodl-tmp/强化学习# 
+================================================================================
+Iteration 10
+time/training: 2.01706600189209
+evaluation/target_0.05_return_mean: 0.040592328852964155
+evaluation/target_0.05_return_std: 0.03900403422513942
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+time/total: 59.23416185379028
+time/evaluation: 4.901487350463867
+training/train_loss_mean: 0.049845557054504754
+training/train_loss_std: 0.0017034099121122953
+training/action_error: 0.04782570153474808
+RTG embedding weight norm: 6.4228105545043945
+RTG embedding bias norm: 6.425373554229736
+State embedding weight norm: 6.642115116119385
+Action embedding weight norm: 6.2539801597595215
+RTG embedding output range: -1.046865463256836 to 1.0142338275909424
+RTG embedding output std: 0.5699751377105713
+Saved trained model to dt_model.pth
+(base) root@autodl-container-5d5147b55f-ca24a251:~/autodl-tmp/强化学习# 
+
+
+0.010	0.03806	
+0.025	0.03959	
+0.035	0.03912	
+0.050	0.04059
+
+
+Using the different targets
+================================================================================
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/simulated_stock_trajs_medium.pkl --eval_dataset_path data/simulated_stock_eval_31x50.pkl --model_type dt --max_iters 10 --num_steps_per_iter 80 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.02 0.04 0.05 0.067
+
+Iteration 10
+time/training: 1.7029101848602295
+evaluation/target_0.02_return_mean: 0.03544758072867126
+evaluation/target_0.02_return_std: 0.03475982932485504
+evaluation/target_0.02_length_mean: 30.0
+evaluation/target_0.02_length_std: 0.0
+evaluation/target_0.04_return_mean: 0.035461830142020576
+evaluation/target_0.04_return_std: 0.034757642370048074
+evaluation/target_0.04_length_mean: 30.0
+evaluation/target_0.04_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.03546893575693796
+evaluation/target_0.05_return_std: 0.034755922992978326
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.067_return_mean: 0.03548070833476824
+evaluation/target_0.067_return_std: 0.034752225432875976
+evaluation/target_0.067_length_mean: 30.0
+evaluation/target_0.067_length_std: 0.0
+
+
+Using larger num_steps_per_iter 80 --> 2000; max_iters 10 --> 20; appears to vary more significantly in the 3rd decimal place
+================================================================================
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/simulated_stock_trajs_medium.pkl --eval_dataset_path data/simulated_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.02 0.04 0.05 0.067
+==================================================
+Starting new experiment: Offline Stock RL
+20000 trajectories, 620000 timesteps found
+Average return: 0.0468, std: 0.0119
+Max return: 0.0678, min: 0.0258
+==================================================
+Using evaluation dataset: 50 trajectories
+================================================================================
+================================================================================
+Iteration 20
+time/training: 43.99213695526123
+evaluation/target_0.02_return_mean: 0.03413213869615816
+evaluation/target_0.02_return_std: 0.03388848920184751
+evaluation/target_0.02_length_mean: 30.0
+evaluation/target_0.02_length_std: 0.0
+evaluation/target_0.04_return_mean: 0.034191895982338225
+evaluation/target_0.04_return_std: 0.03473517029212343
+evaluation/target_0.04_length_mean: 30.0
+evaluation/target_0.04_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.03418550399525377
+evaluation/target_0.05_return_std: 0.03501919789238455
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.067_return_mean: 0.03466930420852472
+evaluation/target_0.067_return_std: 0.035188625987905085
+evaluation/target_0.067_length_mean: 30.0
+evaluation/target_0.067_length_std: 0.0
+time/total: 1165.890415430069
+time/evaluation: 14.98842453956604
+training/train_loss_mean: 0.030488199689425528
+training/train_loss_std: 0.0009634454721715643
+training/action_error: 0.029294736683368683
+
+
+In training, there’s no clear pattern mapping low RTG to consistently different (worse) actions. DT learns the best policy it has seen in training (~0.0467 average return), but when evaluated on harder trajectories (where MVP gives only 0.04), that same policy yields ~0.034 — and DT simply can’t do better, because the environment doesn’t allow it.
+
+
+
+Now moving on to emperical stock data:
+
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/medium.pkl --eval_dataset_path data/real_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.08
+==================================================
+Starting new experiment: Offline Stock RL
+20000 trajectories, 620000 timesteps found
+Average return: 0.1240, std: 0.0598
+Max return: 0.2352, min: 0.0183
+==================================================
+Using evaluation dataset: 50 trajectories
+================================================================================
+Iteration 20
+time/training: 42.00801491737366
+evaluation/target_0.08_return_mean: 0.07254715841927517
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 969.5469918251038
+time/evaluation: 4.6266913414001465
+training/train_loss_mean: 0.029982286954298616
+training/train_loss_std: 0.0009486971752714452
+training/action_error: 0.030969223007559776
+
+
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/medium.pkl --eval_dataset_path data/real_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.08 0.10 0.123
+==================================================
+Starting new experiment: Offline Stock RL
+20000 trajectories, 620000 timesteps found
+Average return: 0.1240, std: 0.0598
+Max return: 0.2352, min: 0.0183
+==================================================
+Using evaluation dataset: 50 trajectories
+================================================================================
+Iteration 20
+time/training: 43.88925290107727
+evaluation/target_0.08_return_mean: 0.06067079061201209
+evaluation/target_0.08_return_std: 6.938893903907228e-18
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+evaluation/target_0.1_return_mean: 0.057288139289415556
+evaluation/target_0.1_return_std: 6.938893903907228e-18
+evaluation/target_0.1_length_mean: 30.0
+evaluation/target_0.1_length_std: 0.0
+evaluation/target_0.123_return_mean: 0.04544414148324449
+evaluation/target_0.123_return_std: 0.0
+evaluation/target_0.123_length_mean: 30.0
+evaluation/target_0.123_length_std: 0.0
+time/total: 1120.5044310092926
+time/evaluation: 12.111075162887573
+training/train_loss_mean: 0.030050377566367387
+training/train_loss_std: 0.0009322003415789146
+training/action_error: 0.02832496352493763
+
+
+with new training trajectories where medium --> 30% - 70%
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/medium.pkl --eval_dataset_path data/real_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.03 0.05 0.08
+==================================================
+Starting new experiment: Offline Stock RL
+20000 trajectories, 620000 timesteps found
+Average return: 0.0104, std: 0.0644
+Max return: 0.1187, min: -0.0937
+==================================================
+Using evaluation dataset: 50 trajectories
+Iteration 20
+time/training: 45.078537940979004
+evaluation/target_0.03_return_mean: 0.05731178316811514
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06260650422526215
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.07041006381255244
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 1173.2810292243958
+time/evaluation: 13.711155652999878
+training/train_loss_mean: 0.030204046880826355
+training/train_loss_std: 0.0009636794217577167
+training/action_error: 0.0299149788916111
+
+
+With new training trajectories where medium --> 40% - 75%, and prices/states normalized, i.e. starts being 100 at time 0, since training and evaluation might be seeing completely different prices/states. note: State normalization alters the spatial relationships the model relies on to infer future return, may damage the performance.
+
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/medium.pkl --eval_dataset_path data/real_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.03 0.06 0.08
+
+
+medium --> 40% - 75%, evaluation set with rewards and actions being 0, no normalization, raw price being used
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/medium.pkl --eval_dataset_path data/real_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.03 0.06 0.085
+
+==================================================
+Starting new experiment: Offline Stock RL
+17500 trajectories, 542500 timesteps found
+Average return: 0.0471, std: 0.0634
+Max return: 0.1472, min: -0.0651
+==================================================
+Using evaluation dataset: 50 trajectories
+================================================================================
+Iteration 20
+time/training: 44.868966817855835
+evaluation/target_0.03_return_mean: 0.0615198650881581
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.06_return_mean: 0.06419855543187779
+evaluation/target_0.06_return_std: 1.3877787807814457e-17
+evaluation/target_0.06_length_mean: 30.0
+evaluation/target_0.06_length_std: 0.0
+evaluation/target_0.085_return_mean: 0.06719817908504222
+evaluation/target_0.085_return_std: 0.0
+evaluation/target_0.085_length_mean: 30.0
+evaluation/target_0.085_length_std: 0.0
+time/total: 1120.709346294403
+time/evaluation: 11.27805209159851
+training/train_loss_mean: 0.030191969356499614
+training/train_loss_std: 0.0009502878438269738
+training/action_error: 0.0293637253344059
+
+
+medium --> 40% - 80%, evaluation set with rewards and actions being 0, no normalization, raw price being used
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/medium.pkl --eval_dataset_path data/real_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.03 0.06 0.085
+
+==================================================
+Starting new experiment: Offline Stock RL
+20000 trajectories, 620000 timesteps found
+Average return: 0.0645, std: 0.0545
+Max return: 0.1552, min: -0.0406
+==================================================
+Using evaluation dataset: 50 trajectories
+================================================================================
+Iteration 20
+time/training: 44.65144395828247
+evaluation/target_0.03_return_mean: 0.05877093843932645
+evaluation/target_0.03_return_std: 6.938893903907228e-18
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.06_return_mean: 0.05928382589673408
+evaluation/target_0.06_return_std: 6.938893903907228e-18
+evaluation/target_0.06_length_mean: 30.0
+evaluation/target_0.06_length_std: 0.0
+evaluation/target_0.085_return_mean: 0.044309831329488285
+evaluation/target_0.085_return_std: 6.938893903907228e-18
+evaluation/target_0.085_length_mean: 30.0
+evaluation/target_0.085_length_std: 0.0
+time/total: 1122.445119380951
+time/evaluation: 10.517681121826172
+training/train_loss_mean: 0.030065185108222068
+training/train_loss_std: 0.000933449345323365
+training/action_error: 0.03008701466023922
+
+
+
+
+
+##### The best setup yet####
+medium --> 20% - 70%, evaluation set with rewards and actions being 0, no normalization, raw price being used, changed lookback 90 --> 60 (sampled training trajectories being closer to the evaluation dates), train_group_count 50 --> 20, train_traj_per_group 1000 --> 3000, ####training trajectories now allow shorting (fixed!)####
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/medium.pkl --eval_dataset_path data/real_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.03 0.05 0.08
+
+==================================================
+Starting new experiment: Offline Stock RL
+30000 trajectories, 930000 timesteps found
+Average return: 0.0884, std: 0.0648
+Max return: 0.2004, min: -0.0304
+==================================================
+Using evaluation dataset: 1 trajectories
+================================================================================
+Iteration 1
+time/training: 45.17675256729126
+evaluation/target_0.03_return_mean: 0.04979304424024633
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.049404677314355716
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.0488438073195403
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 45.4557158946991
+time/evaluation: 0.2678525447845459
+training/train_loss_mean: 0.26566890028864143
+training/train_loss_std: 0.07354345573734526
+training/action_error: 0.21427404880523682
+================================================================================
+Iteration 2
+time/training: 44.36470317840576
+evaluation/target_0.03_return_mean: 0.042480437726025944
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.042229316047904586
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.04176782306388516
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 90.08780574798584
+time/evaluation: 0.26645827293395996
+training/train_loss_mean: 0.21580863393843175
+training/train_loss_std: 0.005413746073404746
+training/action_error: 0.21816889941692352
+================================================================================
+Iteration 3
+time/training: 44.65255570411682
+evaluation/target_0.03_return_mean: 0.047576265814250895
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.04830441146988251
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.048894409428125396
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 135.006742477417
+time/evaluation: 0.2654564380645752
+training/train_loss_mean: 0.2146822997033596
+training/train_loss_std: 0.005386903722675322
+training/action_error: 0.2132280468940735
+================================================================================
+Iteration 4
+time/training: 44.74230217933655
+evaluation/target_0.03_return_mean: 0.050572200775869325
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.05089868010158716
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.051056921660396215
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 180.0173797607422
+time/evaluation: 0.2673194408416748
+training/train_loss_mean: 0.21392868161201478
+training/train_loss_std: 0.005389154167337881
+training/action_error: 0.21126779913902283
+================================================================================
+Iteration 5
+time/training: 43.72817802429199
+evaluation/target_0.03_return_mean: 0.05116988660528077
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.061728448981273276
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.0737812152367967
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 224.0114815235138
+time/evaluation: 0.2649707794189453
+training/train_loss_mean: 0.2125381556376815
+training/train_loss_std: 0.005416700214506006
+training/action_error: 0.21808750927448273
+================================================================================
+Iteration 6
+time/training: 42.880470752716064
+evaluation/target_0.03_return_mean: 0.04714110211815492
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06264940276649522
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08007382992335943
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 267.1558542251587
+time/evaluation: 0.26301050186157227
+training/train_loss_mean: 0.2107296509668231
+training/train_loss_std: 0.005251966430673134
+training/action_error: 0.22037212550640106
+================================================================================
+Iteration 7
+time/training: 42.872472524642944
+evaluation/target_0.03_return_mean: 0.04846832052822303
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06275697905320476
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.0798955787449418
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 310.2937927246094
+time/evaluation: 0.2647683620452881
+training/train_loss_mean: 0.2090508280172944
+training/train_loss_std: 0.005141145946425269
+training/action_error: 0.2077442705631256
+================================================================================
+Iteration 8
+time/training: 44.66715955734253
+evaluation/target_0.03_return_mean: 0.04830066046311088
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06224798960095912
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08002407271530321
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 355.2315676212311
+time/evaluation: 0.2697303295135498
+training/train_loss_mean: 0.2078916232138872
+training/train_loss_std: 0.005250690681387733
+training/action_error: 0.21046672761440277
+================================================================================
+Iteration 9
+time/training: 44.11393165588379
+evaluation/target_0.03_return_mean: 0.04832989764143836
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.0630433426471837
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.07880750725291197
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 399.61276030540466
+time/evaluation: 0.2662696838378906
+training/train_loss_mean: 0.20713961382955312
+training/train_loss_std: 0.005255436134865182
+training/action_error: 0.20103803277015686
+================================================================================
+Iteration 10
+time/training: 44.34565019607544
+evaluation/target_0.03_return_mean: 0.04904361684868275
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06288830910785226
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08164360245492697
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 444.22745966911316
+time/evaluation: 0.2680811882019043
+training/train_loss_mean: 0.20617361533641815
+training/train_loss_std: 0.005209614262471259
+training/action_error: 0.2079191952943802
+================================================================================
+Iteration 11
+time/training: 44.89191007614136
+evaluation/target_0.03_return_mean: 0.053996005992073215
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06820464141448501
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08401787416081063
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 489.3863000869751
+time/evaluation: 0.2659766674041748
+training/train_loss_mean: 0.20578217432647944
+training/train_loss_std: 0.00520593468792188
+training/action_error: 0.20616090297698975
+================================================================================
+Iteration 12
+time/training: 43.67577815055847
+evaluation/target_0.03_return_mean: 0.05297205097675772
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06578233737111172
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.0829219831510497
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 533.3264155387878
+time/evaluation: 0.2634110450744629
+training/train_loss_mean: 0.20554969272762538
+training/train_loss_std: 0.005357391768168849
+training/action_error: 0.1993352174758911
+================================================================================
+Iteration 13
+time/training: 43.456183671951294
+evaluation/target_0.03_return_mean: 0.058546607783231064
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.07094054654779347
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08485535875849592
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 576.9603686332703
+time/evaluation: 0.17692112922668457
+training/train_loss_mean: 0.20476318030059337
+training/train_loss_std: 0.005305854406220403
+training/action_error: 0.21007822453975677
+================================================================================
+Iteration 14
+time/training: 42.12053394317627
+evaluation/target_0.03_return_mean: 0.05882127426450934
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.07056241803365815
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.0796470168361112
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 619.2638137340546
+time/evaluation: 0.18226003646850586
+training/train_loss_mean: 0.20457563470304013
+training/train_loss_std: 0.005271878857926632
+training/action_error: 0.20307257771492004
+================================================================================
+Iteration 15
+time/training: 44.7291259765625
+evaluation/target_0.03_return_mean: 0.05860723998209938
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06964189137776544
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.07846319565008764
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 664.2591071128845
+time/evaluation: 0.2656216621398926
+training/train_loss_mean: 0.20396497477591038
+training/train_loss_std: 0.005361421656859551
+training/action_error: 0.2037966400384903
+================================================================================
+Iteration 16
+time/training: 43.77985215187073
+evaluation/target_0.03_return_mean: 0.059064141006773374
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.07001564219936918
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08007269329918731
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 708.214385509491
+time/evaluation: 0.1745445728302002
+training/train_loss_mean: 0.2039071234688163
+training/train_loss_std: 0.005170340571952625
+training/action_error: 0.208940327167511
+================================================================================
+Iteration 17
+time/training: 44.05786967277527
+evaluation/target_0.03_return_mean: 0.05857677939254602
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.07122325323212819
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08154434190705473
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 752.443690776825
+time/evaluation: 0.17073297500610352
+training/train_loss_mean: 0.2035675483494997
+training/train_loss_std: 0.005150479675302286
+training/action_error: 0.20769168436527252
+================================================================================
+Iteration 18
+time/training: 44.353071451187134
+evaluation/target_0.03_return_mean: 0.057124479632591596
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06911866207438955
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.07628481905582607
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 797.0656177997589
+time/evaluation: 0.2683227062225342
+training/train_loss_mean: 0.20314582958817481
+training/train_loss_std: 0.0051773908618237335
+training/action_error: 0.20133556425571442
+================================================================================
+Iteration 19
+time/training: 45.11710858345032
+evaluation/target_0.03_return_mean: 0.054752588768760546
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06584945425907618
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08185033264905228
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 842.447371006012
+time/evaluation: 0.26368117332458496
+training/train_loss_mean: 0.20312169018387793
+training/train_loss_std: 0.0051894003378560845
+training/action_error: 0.20765063166618347
+================================================================================
+Iteration 20
+time/training: 44.625367879867554
+evaluation/target_0.03_return_mean: 0.05542089422644447
+evaluation/target_0.03_return_std: 0.0
+evaluation/target_0.03_length_mean: 30.0
+evaluation/target_0.03_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06569585754465823
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.0807993038009871
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 887.338700056076
+time/evaluation: 0.2651040554046631
+training/train_loss_mean: 0.20313456576317548
+training/train_loss_std: 0.005268961027752149
+training/action_error: 0.1996946781873703
+
+
+Seems like when env_target set to 0.035 0.05 0.08 and 0.03 0.05 0.08 works the best, when higher target included (e.g. 0.083 or higher), the model is giving bad results. The model training is not actually the same when you run with different env_targets settings, even if they’re only used for evaluation. If only one high target (e.g., [0.08]) is used, the model's sensitivity to out-of-distribution RTG values is exposed without the stabilizing effect of nearby lower targets.
+############################################################################################################################################################################
+(decision-transformer-gym) root@autodl-container-ade2498877-1dacf153:~/autodl-tmp/My_DT_v2# python experiment.py --dataset_path data/medium.pkl --eval_dataset_path data/real_stock_eval_31x50.pkl --model_type dt --max_iters 20 --num_steps_per_iter 2000 --batch_size 32 --K 31 --embed_dim 128 --n_layer 3 --n_head 1 --scale 0.1 --learning_rate 1e-4 --device cuda --env_targets 0.035 0.05 0.08 
+==================================================
+Starting new experiment: Offline Stock RL
+30000 trajectories, 930000 timesteps found
+Average return: 0.0631, std: 0.0607
+Max return: 0.1708, min: -0.0471
+==================================================
+Using evaluation dataset: 1 trajectories
+================================================================================
+Iteration 20
+time/training: 45.100860595703125
+evaluation/target_0.035_return_mean: 0.06477987041408828
+evaluation/target_0.035_return_std: 0.0
+evaluation/target_0.035_length_mean: 30.0
+evaluation/target_0.035_length_std: 0.0
+evaluation/target_0.05_return_mean: 0.06839748812629032
+evaluation/target_0.05_return_std: 0.0
+evaluation/target_0.05_length_mean: 30.0
+evaluation/target_0.05_length_std: 0.0
+evaluation/target_0.08_return_mean: 0.08190306836550709
+evaluation/target_0.08_return_std: 0.0
+evaluation/target_0.08_length_mean: 30.0
+evaluation/target_0.08_length_std: 0.0
+time/total: 916.9807472229004
+time/evaluation: 0.28000402450561523
+training/train_loss_mean: 0.2043632915019989
+training/train_loss_std: 0.005231893752148381
+training/action_error: 0.20212842524051666
